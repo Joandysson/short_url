@@ -5,17 +5,8 @@ import {
     CreateDateColumn,
     PrimaryGeneratedColumn,
     UpdateDateColumn,
-    DeleteDateColumn,
-    Double,
-    OneToOne,
-    JoinColumn,
-    OneToMany,
+    DeleteDateColumn
 } from "typeorm";
-
-export enum TypeAccountRole {
-    C = "C",
-    P = "P",
-}
 
 @Entity('accounts')
 export default class ShortUrl extends BaseEntity {
@@ -23,23 +14,11 @@ export default class ShortUrl extends BaseEntity {
     @PrimaryGeneratedColumn('increment')
     public id: number;
 
-    @Column({type: 'numeric', name: 'people_id'})
-    public peopleId: number;
+    @Column({type: 'varchar'})
+    public url: string;
 
-    @Column({type: 'double'})
-    public balance: number;
-
-    @Column({type: 'numeric', name: 'daily_summary_limit'})
-    public dailySummaryLimit: number;
-
-    @Column({type: 'boolean', name: 'active_flag'})
-    public activeFlag: boolean;
-
-    @Column({type: 'enum', enum: TypeAccountRole, name: 'type_account'})
-    public typeAccount: TypeAccountRole;
-
-    @Column({type: 'date', name:'date_birthday'})
-    public dateBirthday: Date;
+    @Column({type: 'varchar'})
+    public code: string;
 
     @CreateDateColumn({name: 'created_at'})
     public createdAt: Date;

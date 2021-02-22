@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
-export class PeopleTable1613934218313 implements MigrationInterface {
-    private table = "people"
+export class ShortUrlTable1613934218313 implements MigrationInterface {
+    private table = "shorturl"
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
             name: this.table,
@@ -14,17 +14,13 @@ export class PeopleTable1613934218313 implements MigrationInterface {
                     isGenerated: true
                 },
                 {
-                    name: "name",
+                    name: "url",
                     type: "varchar",
                 },
                 {
-                    name: "cpf",
+                    name: "code",
                     type: "varchar",
-                    length: "11"
-                },
-                {
-                    name: "date_birthday",
-                    type: "timestamp",
+                    length: "10"
                 },
                 {
                     name: "created_at",
