@@ -2,6 +2,7 @@ import ShortUrl from "@models/ShortUrl";
 import { gerateShortURLValid } from "app/utils/gerateRandom";
 import { IEnv } from '@interfaces/IEnv';
 import { Request, Response } from "express";
+import { renderShortUrl } from "@views/short_url";
 
 class ShortUrlController {
     async index(request: Request, response: Response) {
@@ -27,7 +28,7 @@ class ShortUrlController {
             })
             insertShortUrl.save();
 
-            response.json({ url: insertShortUrl.url }).status(200);
+            response.json(renderShortUrl(insertShortUrl)).status(201);
         } catch (error) {
             response.json({ error: error.message }).sendStatus(500);
         }
