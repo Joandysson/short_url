@@ -11,7 +11,7 @@
 1. Faça um clone do repositório:
 
 ```sh
-  $ git clone https://github.com/HigorSnt/proffy.git
+  $ git clone https://github.com/Joandysson/short_url.git
 ```
 
 2. Configuração de ambiente:
@@ -52,7 +52,7 @@
     $ yarn dev # ou npm run dev
 ```
 
-3. Executando testes:
+4. Executando testes:
 
 ```sh
     # Executando todos os testes.
