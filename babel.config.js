@@ -22,6 +22,7 @@ module.exports = {
                 '@views': './src/views',
                 '@database': './src/database',
                 '@interfaces': './src/interfaces',
+                '@utils': './src/app/utils',
             }
         }]
     ],
