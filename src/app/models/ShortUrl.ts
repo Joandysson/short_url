@@ -8,7 +8,7 @@ import {
     DeleteDateColumn
 } from "typeorm";
 
-@Entity('accounts')
+@Entity('shorturls')
 export default class ShortUrl extends BaseEntity {
 
     @PrimaryGeneratedColumn('increment')
@@ -16,6 +16,9 @@ export default class ShortUrl extends BaseEntity {
 
     @Column({type: 'varchar'})
     public url: string;
+
+    @Column({type: 'varchar'})
+    public redirect: string;
 
     @Column({type: 'varchar'})
     public code: string;

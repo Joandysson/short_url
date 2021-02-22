@@ -1,4 +1,4 @@
-export interface Env {
+export interface IEnv {
     // Config TYPEORM
     TYPEORM_CONNECTION: 'mysql' | 'postgres' | 'sqlite' | 'better' | 'cordova' | 'react' | 'nativescript' | 'mssql' | 'mongodb' | 'sql.js' | 'exp',
     TYPEORM_HOST: string,

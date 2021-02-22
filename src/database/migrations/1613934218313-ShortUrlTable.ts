@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class ShortUrlTable1613934218313 implements MigrationInterface {
-    private table = "shorturl"
+    private table = "shorturls"
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
             name: this.table,
@@ -15,6 +15,10 @@ export class ShortUrlTable1613934218313 implements MigrationInterface {
                 },
                 {
                     name: "url",
+                    type: "varchar",
+                },
+                {
+                    name: "redirect",
                     type: "varchar",
                 },
                 {

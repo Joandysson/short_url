@@ -1,21 +1,24 @@
 import ShortUrl from "@models/ShortUrl";
+import { gerateShortURLValid } from "app/utils/gerateRandom";
+import { IEnv } from '@interfaces/IEnv';
 import { Request, Response } from "express";
-import { } from "typeorm";
 
 class ShortUrlController {
-    async index() {
-
-    }
-
     async store(request: Request, response: Response) {
+        const { HOST, PORT } = process.env as IEnv;
         try {
-            // const insertShortUrl = ShortUrl.create({})
 
-            // const shortUrl = await insertShortUrl.save();
+            const code = await gerateShortURLValid()
 
-            response.sendStatus(200);
+            const insertShortUrl = ShortUrl.create({
+                url: `${HOST}:${PORT}/${code}`,
+                redirect: request.body.url,
+                code: code
+            })
+            insertShortUrl.save();
+
+            response.json({ url: insertShortUrl.url }).status(200);
         } catch (error) {
-            console.log(error.message)
             response.json({ error: error.message }).sendStatus(500);
         }
     }

@@ -4,9 +4,9 @@ import routers from '@routers/index';
 import errorHandler from './app/errors/handler';
 import cors from 'cors';
 import '@database/connect';
-import { Env } from '@interfaces/IEnv';
+import { IEnv } from '@interfaces/IEnv';
 
-const { HOST, PORT } = process.env as Env;
+const { HOST, PORT } = process.env as IEnv;
 
 const app = express()
 
