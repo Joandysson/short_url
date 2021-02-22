@@ -8,6 +8,7 @@ routers.get('/', (request, response) => {
     return response.status(200).send('Api bank api V1.0.0')
 });
 
+routers.get('/:code', shortUrlController.index)
 routers.post('/encurtador', validStore, shortUrlController.store)
 
 export default routers;

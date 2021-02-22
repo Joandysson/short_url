@@ -11,8 +11,7 @@ export function gerateShort() : string {
 
 export async function gerateShortURLValid() : Promise<string> {
     const code = gerateShort()
-    const datetime = new Date().toISOString().slice(0,10);
-    const existsCode = await ShortUrl.find({where: {code: code, createdAt: LessThan(datetime)}})
+    const existsCode = await ShortUrl.varifyURLCode(code);
 
     if(existsCode) {
         gerateShortURLValid()

@@ -4,6 +4,16 @@ import { IEnv } from '@interfaces/IEnv';
 import { Request, Response } from "express";
 
 class ShortUrlController {
+    async index(request: Request, response: Response) {
+
+        const existsCode = await ShortUrl.varifyURLCode(request.params.code);
+
+        if(existsCode.length > 0) return response.redirect(existsCode[0].redirect);
+
+        response.sendStatus(404);
+
+    }
+
     async store(request: Request, response: Response) {
         const { HOST, PORT } = process.env as IEnv;
         try {
