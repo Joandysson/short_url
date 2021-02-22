@@ -24,7 +24,8 @@ module.exports = {
                 '@interfaces': './src/interfaces',
                 '@utils': './src/app/utils',
             }
-        }]
+        }],
+        [ "@babel/plugin-proposal-decorators", {"legacy": true }]
     ],
     ignore: [
         '**/*.spec.ts'
