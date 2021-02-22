@@ -52,7 +52,13 @@
     $ yarn dev # ou npm run dev
 ```
 
-4. Executando testes:
+4. Executando no postman:
+
+```sh
+    inportar "Short Url.postman_collection.json postman" postman realizar as requisções a API
+```
+
+5. Executando testes:
 
 ```sh
     # Executando todos os testes.

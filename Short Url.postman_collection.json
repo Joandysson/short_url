@@ -1,0 +1,66 @@
+{
+	"id": "7d8cdf8d-23db-84e2-e89d-93016648b78f",
+	"name": "Short Url",
+	"description": "",
+	"order": [
+		"93d69484-b8ba-7f78-a158-314ceb41abd1",
+		"de28d040-2884-f621-3c80-954898df7168"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1613994074675,
+	"owner": "8542119",
+	"public": false,
+	"requests": [
+		{
+			"id": "93d69484-b8ba-7f78-a158-314ceb41abd1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3333/encurtador",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614029028051,
+			"name": "Short",
+			"description": "",
+			"collectionId": "7d8cdf8d-23db-84e2-e89d-93016648b78f",
+			"responses": [],
+			"rawModeData": "{\"url\": \"http://sll.com\"}"
+		},
+		{
+			"id": "de28d040-2884-f621-3c80-954898df7168",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:3333/i2ametl54563",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1614003970501,
+			"name": "Redirect",
+			"description": "",
+			"collectionId": "7d8cdf8d-23db-84e2-e89d-93016648b78f",
+			"responses": []
+		}
+	]
+}
