@@ -48,6 +48,7 @@
       "@models/*": ["app/models/*"],
       "@midlewares/*": ["app/midlewares/*"],
       "@validators/*": ["app/validators/*"],
+      "@utils/*": ["app/utils/*"],
       "@config/*": ["app/config/*"],
       "@routers/*": ["routers/*"],
       "@views/*": ["views/*"],
@@ -79,9 +80,9 @@
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
-  // "include": [
-  //   "src"
-  // ],
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]

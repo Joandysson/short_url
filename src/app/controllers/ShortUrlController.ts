@@ -1,5 +1,5 @@
 import ShortUrl from "@models/ShortUrl";
-import { gerateShortURLValid } from "app/utils/gerateRandom";
+import { gerateShortURLValid } from "@utils/gerateRandom";
 import { IEnv } from '@interfaces/IEnv';
 import { Request, Response } from "express";
 import { renderShortUrl } from "@views/short_url";
