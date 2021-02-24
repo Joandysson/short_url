@@ -56,6 +56,7 @@
 
 ```sh
     inportar "Short Url.postman_collection.json postman" postman realizar as requisções a API
+    Documentação Postman "docs/Postman - Documentation short Url.pdf"
 ```
 
 5. Executando testes:
